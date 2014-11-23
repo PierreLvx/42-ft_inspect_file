@@ -6,7 +6,7 @@
 /*   By: plavaux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/22 16:40:13 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 03:57:29 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/11/23 04:24:57 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,15 @@ void				get_file_group(const char *filename)
 	ft_putchar('\n');
 }
 
-int					get_file_links(const char *filename)
+void				get_file_links(const char *filename)
 {
 	struct stat		fst;
 
 	if (stat(filename, &fst))
 		fprintf(stderr, "'stat' failed for '%s': %s.\n", filename, strerror (errno));
-	return (fst.st_nlink);
+	ft_putstr("Links: ");
+	ft_putnbr(fst.st_nlink);
+	ft_putchar('\n');
 }
 
 void				get_file_modtime(const char *filename)
@@ -125,7 +127,7 @@ int					inspect_file(char *filename)
 	get_file_name((const char*)filename);
 	get_file_type((const char*)filename);
 	get_file_perms((const char*)filename);
-	printf("Links: %d\n", get_file_links((const char*)filename));
+	get_file_links((const char*)filename);
 	get_file_owner((const char*)filename);
 	get_file_group((const char*)filename);
 	printf("Filesize: %d bytes\n", get_file_size((const char*)filename));
