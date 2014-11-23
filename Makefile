@@ -6,7 +6,7 @@
 #    By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/05 11:13:35 by plavaux           #+#    #+#              #
-#    Updated: 2014/11/22 16:39:02 by plavaux          ###   ########.fr        #
+#    Updated: 2014/11/23 19:49:05 by plavaux          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,15 +14,15 @@ NAME = ft_inspect_file
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC =	*.c
-
+SRC =	src/*.c
+INC =	-I includes/
 OBJ = $(SRC:.c=.o)
 LIBFT = libft/libft.a
 
 all: $(NAME)
 
 $(NAME):
-	@$(CC) $(CFLAGS) $? $(SRC) $(LIBFT) -o $(NAME)
+	@$(CC) $(CFLAGS) $? $(SRC) $(LIBFT) $(INC) -o $(NAME)
 	@echo "\033[32mCompiled $(NAME).\033[0m"
 
 clean:
