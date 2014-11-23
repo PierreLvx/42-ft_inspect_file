@@ -6,9 +6,11 @@
 /*   By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/22 16:40:13 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 20:08:43 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/11/23 20:18:49 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_inspect_file.h"
 
 int					inspect_file(char *filename)
 {

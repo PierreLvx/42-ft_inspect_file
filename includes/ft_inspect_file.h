@@ -6,7 +6,7 @@
 /*   By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 11:40:29 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 20:08:58 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/11/23 20:18:02 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 #include "../libft/libft.h"
 
 struct stat		fst;
+struct passwd	*pw;
 
 int				inspect_file(char *filename);
 

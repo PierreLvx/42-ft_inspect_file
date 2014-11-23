@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_file_owner.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plavaux <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/23 19:51:45 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 19:51:48 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/11/23 20:18:17 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void				get_file_owner(const char *filename)
 {
-	struct passwd	*pw;
-
 	stat(filename, &fst);
 	pw = getpwuid(fst.st_uid);
 	ft_putstr("Owner: ");
