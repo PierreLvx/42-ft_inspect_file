@@ -6,7 +6,7 @@
 /*   By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 11:40:29 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 20:18:02 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/11/25 20:37:16 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ struct passwd	*pw;
 int				inspect_file(char *filename);
 
 void			get_file_group(const char *filename);
-void			get_file_links(const char *filename);
+void			get_file_links(void);
 void			get_file_modtime(const char *filename);
 void			get_file_name(const char *filename);
 void			get_file_owner(const char *filename);
