@@ -6,13 +6,11 @@
 /*   By: plavaux <plavaux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/22 16:40:13 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 20:09:03 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/12/03 00:01:00 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** <stdio.h> is required for perror().
-** <time.h> is required for ctime().
 ** RESOURCES:
 ** http://www.gnu.org/software/libc/manual/html_node/Testing-File-Type.html
 ** http://codewiki.wikidot.com/c:system-calls:stat (inode)

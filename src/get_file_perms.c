@@ -6,7 +6,7 @@
 /*   By: plavaux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/23 19:51:55 by plavaux           #+#    #+#             */
-/*   Updated: 2014/11/23 19:51:57 by plavaux          ###   ########.fr       */
+/*   Updated: 2014/12/02 23:57:58 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void				get_file_perms(const char *filename)
 	ft_putchar((fst.st_mode & S_IROTH) ? 'r' : '-');
 	ft_putchar((fst.st_mode & S_IWOTH) ? 'w' : '-');
 	ft_putchar((fst.st_mode & S_IXOTH) ? 'x' : '-');
+	get_file_xattr(filename) ? ft_putchar('@') : ft_putchar(' ');
 	ft_putchar('\n');
 }
