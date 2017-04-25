@@ -15,6 +15,15 @@
 int					get_file_xattr(const char *filename)
 {
 	char			list[XATTR_MAXSIZE];
+	int				return_attr;
 
-	return (listxattr(filename, list, XATTR_MAXSIZE, 0));
+	#if defined(__APPLE__)
+	    return_attr = listxattr(filename, list, XATTR_MAXSIZE, 0);
+	#endif
+
+	#if defined(__linux__)
+	    return_attr = listxattr(filename, list, XATTR_MAXSIZE);
+	#endif
+
+	return (return_attr);
 }
