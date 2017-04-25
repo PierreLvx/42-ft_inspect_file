@@ -1,5 +1,16 @@
 language: c
 
+matrix:
+  include:
+  - os: linux
+    dist: xenial
+    sudo: required
+  - os: linux
+    dist: jessie
+    sudo: required
+  - os: osx
+    osx_image: xcode8.3
+
 compiler: gcc
 
 # The EDU plan doesn't support sudo :(
@@ -10,7 +21,9 @@ compiler: gcc
 
 script:
 #   - cppcheck --enable=warning,style,performance,portability,missingInclude --std=c89 *.c -q
-    - cd libft && make && cd ..
-    - make
-    - ./ft_inspect_file libft/
-    - ./ft_inspect_file main.c
+  - cd libft && make && cd ..
+  - make
+
+after_success:
+  - ./ft_inspect_file libft/
+  - ./ft_inspect_file main.c
